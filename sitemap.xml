@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Preview sitemap. Add live property and locality URLs only after client review. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://bhaivatech.com/</loc></url>
+  <url><loc>https://bhaivatech.com/about.html</loc></url>
+  <url><loc>https://bhaivatech.com/how-we-verify.html</loc></url>
+  <url><loc>https://bhaivatech.com/renters-guide.html</loc></url>
+  <url><loc>https://bhaivatech.com/buyers-guide.html</loc></url>
+  <url><loc>https://bhaivatech.com/contact.html</loc></url>
+</urlset>

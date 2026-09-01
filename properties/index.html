@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="description" content="Preview the BhaivaTech property catalogue for homes to rent and buy in Bengaluru.">
+  <meta property="og:title" content="Bengaluru properties | BhaivaTech Homes">
+  <meta property="og:description" content="A preview of the future Bengaluru property catalogue. Live listings will be added after client review.">
+  <meta property="og:type" content="website">
+  <title>Bengaluru properties | BhaivaTech Homes preview</title>
+  <link rel="stylesheet" href="../styles.css">
+  <script type="module">
+    import { prepare, layout } from 'https://esm.sh/@chenglou/pretext';
+    window.Pretext = { prepare, layout };
+    window.dispatchEvent(new Event('pretext-ready'));
+  </script>
+  <script src="../script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a class="brand-lockup" href="../index.html" aria-label="BhaivaTech Homes home"><img src="../assets/bhaivatech-logo.png" alt="BhaivaTech"><span class="brand-lockup__descriptor">Property desk</span></a>
+      <nav class="primary-nav" id="primary-navigation" data-primary-nav aria-label="Primary navigation">
+        <a href="../index.html">Home</a><a href="index.html" aria-current="page">Properties</a><a href="../about.html">About</a><a href="../how-we-verify.html">How we check</a><a href="../renters-guide.html">Renters guide</a><a href="../buyers-guide.html">Buyers guide</a><a href="../contact.html">Contact</a>
+      </nav>
+      <div class="header-actions"><a class="button button--primary button--small" href="https://wa.me/918277807904?text=Hello%20BhaivaTech%20Homes%2C%20I%20want%20help%20finding%20a%20home%20in%20Bengaluru." target="_blank" rel="noopener">WhatsApp us</a><button class="menu-toggle" type="button" data-menu-toggle aria-expanded="false" aria-controls="primary-navigation" aria-label="Open menu">Menu</button></div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="container page-hero catalogue-hero" aria-labelledby="catalogue-title">
+      <div>
+        <div class="breadcrumbs"><a href="../index.html">Home</a><span aria-hidden="true">/</span><span>Properties</span></div>
+        <p class="eyebrow">Bengaluru property catalogue</p>
+        <h1 id="catalogue-title" data-pretext contenteditable="true" spellcheck="false">Homes worth a closer look.</h1>
+        <p data-pretext contenteditable="true" spellcheck="false">Search the way you are already thinking: rent or buy, locality, budget, and property type. Live listings will be published only after client review.</p>
+      </div>
+      <aside class="catalogue-hero__aside"><p class="notice"><strong>Preview mode.</strong> The cards below demonstrate the catalogue layout. They are not available properties and must not be treated as active inventory.</p></aside>
+    </section>
+
+    <section class="section section--tight" aria-labelledby="search-title">
+      <div class="container">
+        <div class="section-intro"><h2 id="search-title">Search by need.</h2><p class="muted">The real version will search the client’s maintained listing source.</p></div>
+        <form class="filter-bar" aria-label="Filter preview properties">
+          <div class="form-field"><label for="catalogue-intent">I want to</label><select id="catalogue-intent" name="intent" data-property-filter><option value="">Rent or buy</option><option value="rent">Rent</option><option value="buy">Buy</option></select></div>
+          <div class="form-field"><label for="catalogue-locality">Locality</label><select id="catalogue-locality" name="locality" data-property-filter><option value="">Any locality</option><option value="Whitefield">Whitefield</option><option value="Yelahanka">Yelahanka</option><option value="Electronic City">Electronic City</option><option value="Krishnarajapura">Krishnarajapura</option></select></div>
+          <div class="form-field"><label for="catalogue-type">Property type</label><select id="catalogue-type" name="type" data-property-filter><option value="">Any type</option><option value="apartment">Apartment</option><option value="house">Independent home</option></select></div>
+          <div class="form-field"><label for="catalogue-budget">Budget</label><select id="catalogue-budget" name="budget" data-property-filter><option value="">Any budget</option><option value="rent-basic">Monthly rent</option><option value="sale-basic">Sale budget</option></select></div>
+          <button class="button button--primary" type="button" data-clear-filters>Clear filters</button>
+        </form>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="results-title">
+      <div class="container">
+        <div class="catalogue-toolbar"><h2 id="results-title">Preview catalogue</h2><p><span data-result-count>4 preview listings</span> · details to be replaced before launch</p></div>
+        <!-- gstack-shortcut(dec-29d0bfb4-1c5e-407a-89c8-eeb99f6dd342): preview catalogue has no accounts, owner uploads, or live database; upgrade when real listing operations require them. -->
+        <div class="catalogue-grid" data-property-grid>
+          <article class="property-card catalogue-card" data-property-card data-intent="rent" data-locality="Whitefield" data-type="apartment" data-budget="rent-basic">
+            <div class="property-card__image-wrap"><img class="property-card__image" src="../assets/bengaluru-living-room.png" alt="Preview apartment living room in Whitefield" width="1448" height="1086" loading="lazy"><span class="property-card__flag">Preview only</span></div>
+            <div class="property-card__body"><h3>Apartment near everyday essentials</h3><p>Whitefield, Bengaluru</p><div class="property-meta"><span>2 BHK</span><span>Apartment</span><span>Rent</span></div><div class="property-card__footer"><div><p class="property-price">Rent to confirm</p><p class="property-status">Availability to confirm</p></div><a class="text-link" href="../property-preview.html?intent=rent&amp;locality=Whitefield">View layout <span aria-hidden="true">→</span></a></div></div>
+          </article>
+          <article class="property-card catalogue-card" data-property-card data-intent="buy" data-locality="Yelahanka" data-type="house" data-budget="sale-basic">
+            <div class="property-card__image-wrap"><img class="property-card__image" src="../assets/bengaluru-house.png" alt="Preview independent home in Yelahanka" width="1448" height="1086" loading="lazy"><span class="property-card__flag">Preview only</span></div>
+            <div class="property-card__body"><h3>Independent home with a quieter edge</h3><p>Yelahanka, Bengaluru</p><div class="property-meta"><span>Independent home</span><span>Sale</span><span>Visit request</span></div><div class="property-card__footer"><div><p class="property-price">Sale details to confirm</p><p class="property-status">Documents to confirm</p></div><a class="text-link" href="../property-preview.html?intent=buy&amp;locality=Yelahanka">View layout <span aria-hidden="true">→</span></a></div></div>
+          </article>
+          <article class="property-card catalogue-card" data-property-card data-intent="rent" data-locality="Electronic City" data-type="apartment" data-budget="rent-basic">
+            <div class="property-card__image-wrap"><img class="property-card__image" src="../assets/bengaluru-bedroom.png" alt="Preview apartment bedroom in Electronic City" width="1448" height="1086" loading="lazy"><span class="property-card__flag">Preview only</span></div>
+            <div class="property-card__body"><h3>Room to work from home</h3><p>Electronic City, Bengaluru</p><div class="property-meta"><span>2 BHK</span><span>Work corner</span><span>Rent</span></div><div class="property-card__footer"><div><p class="property-price">Rent to confirm</p><p class="property-status">Availability to confirm</p></div><a class="text-link" href="../property-preview.html?intent=rent&amp;locality=Electronic%20City">View layout <span aria-hidden="true">→</span></a></div></div>
+          </article>
+          <article class="property-card catalogue-card" data-property-card data-intent="buy" data-locality="Krishnarajapura" data-type="apartment" data-budget="sale-basic">
+            <div class="property-card__image-wrap"><img class="property-card__image" src="../assets/bengaluru-street-hero.png" alt="Preview apartment street in Krishnarajapura" width="1672" height="941" loading="lazy"><span class="property-card__flag">Preview only</span></div>
+            <div class="property-card__body"><h3>Apartment shortlist near the city edge</h3><p>Krishnarajapura, Bengaluru</p><div class="property-meta"><span>2 or 3 BHK</span><span>Apartment</span><span>Sale</span></div><div class="property-card__footer"><div><p class="property-price">Sale details to confirm</p><p class="property-status">Availability to confirm</p></div><a class="text-link" href="../property-preview.html?intent=buy&amp;locality=Krishnarajapura">View layout <span aria-hidden="true">→</span></a></div></div>
+          </article>
+          <div class="empty-state" data-empty-state hidden><h3>No preview matches that filter.</h3><p>Try another locality or tell the team what you need. The live catalogue will guide you to an enquiry when no exact property is available.</p><a class="button button--outline" href="../contact.html">Tell us your need</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--blue" aria-labelledby="catalogue-help-title">
+      <div class="container split-feature split-feature--reverse">
+        <div class="feature-media"><img src="../assets/bengaluru-bedroom.png" alt="Preview bedroom with a work desk in a Bengaluru apartment" width="1448" height="1086" loading="lazy"></div>
+        <div class="feature-copy"><h2 id="catalogue-help-title">Not sure where to begin?</h2><p>Share your locality, budget, property type, and timeline. A human response can be more useful than another page of filters.</p><a class="button button--primary" href="../contact.html">Send your requirement</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="site-footer__inner"><div class="site-footer__grid"><div><a class="brand-lockup" href="../index.html" aria-label="BhaivaTech Homes home"><img src="../assets/bhaivatech-logo.png" alt="BhaivaTech"><span class="brand-lockup__descriptor">Property desk</span></a><p>Preview catalogue for the new Bengaluru property service.</p></div><div><h2>Explore</h2><ul><li><a href="../index.html">Home</a></li><li><a href="../renters-guide.html">Renters guide</a></li><li><a href="../buyers-guide.html">Buyers guide</a></li></ul></div><div><h2>Trust</h2><ul><li><a href="../about.html">About</a></li><li><a href="../how-we-verify.html">How we check</a></li><li><a href="../contact.html">Contact</a></li></ul></div><div><h2>Talk to us</h2><ul><li><a href="https://wa.me/918277807904" target="_blank" rel="noopener">WhatsApp</a></li><li><a href="https://bhaivatech.com/" target="_blank" rel="noopener">BhaivaTech main site</a></li></ul></div></div><div class="site-footer__bottom"><span>© 2026 BhaivaTech. Preview property service.</span><span>Replace preview data before launch.</span></div></div></footer>
+</body>
+</html>

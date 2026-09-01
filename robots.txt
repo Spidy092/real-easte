@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /property-preview.html
+
+# Replace this host if the final landing page is deployed elsewhere.
+Sitemap: https://bhaivatech.com/sitemap.xml
