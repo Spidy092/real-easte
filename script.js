@@ -39,7 +39,7 @@
       var status = form.querySelector('[data-form-status]');
       if (status) {
         status.hidden = false;
-        status.textContent = 'Thanks. This preview is ready for the client’s real lead destination.';
+        status.textContent = 'This preview form is not connected yet. Please email sale@bhaivatech.com or WhatsApp +91 81975 19766.';
       }
       form.reset();
     });
@@ -68,14 +68,22 @@
     });
 
     if (resultCount) {
-      resultCount.textContent = visibleCount + (visibleCount === 1 ? ' preview listing' : ' preview listings');
+      resultCount.textContent = visibleCount + (visibleCount === 1 ? ' property' : ' properties');
     }
     if (emptyState) emptyState.hidden = visibleCount !== 0;
   }
 
   filters.forEach(function (filter) {
     filter.addEventListener('input', filterProperties);
-    filter.addEventListener('change', filterProperties);
+    filter.addEventListener('change', function () {
+      var nextParams = new URLSearchParams();
+      filters.forEach(function (item) {
+        if (item.value) nextParams.set(item.name, item.value);
+      });
+      var query = nextParams.toString();
+      window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : ''));
+      filterProperties();
+    });
   });
 
   var clearFilters = document.querySelector('[data-clear-filters]');
