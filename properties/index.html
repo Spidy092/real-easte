@@ -3,13 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="robots" content="index, follow">
   <meta name="description" content="Browse BDA independent homes for sale in Bengaluru and enquire directly with BhaivaTech Homes.">
   <meta property="og:title" content="Bengaluru properties for sale | BhaivaTech Homes">
   <meta property="og:description" content="Browse current Bengaluru property details and enquire directly through WhatsApp.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://bhaivatech.com/properties/">
+  <meta property="og:image" content="https://bhaivatech.com/assets/property-30x40-bda.jpeg">
+  <meta property="og:image:alt" content="Front view of a 30 by 40 BDA independent home in Bengaluru">
+  <meta name="twitter:card" content="summary_large_image">
   <title>Bengaluru properties for sale | BhaivaTech Homes</title>
   <link rel="icon" href="../assets/bhaivatech-logo.png" type="image/png">
+  <link rel="canonical" href="https://bhaivatech.com/properties/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://bhaivatech.com/"},{"@type":"ListItem","position":2,"name":"Properties","item":"https://bhaivatech.com/properties/"}]}
+  </script>
   <link rel="stylesheet" href="../styles.css">
   <script type="module">
     import { prepare, layout } from 'https://esm.sh/@chenglou/pretext';
@@ -35,8 +45,8 @@
       <div>
         <div class="breadcrumbs"><a href="../index.html">Home</a><span aria-hidden="true">/</span><span>Properties</span></div>
         <p class="eyebrow">Bengaluru property catalogue</p>
-        <h1 id="catalogue-title" data-pretext contenteditable="true" spellcheck="false">Homes worth a closer look.</h1>
-        <p data-pretext contenteditable="true" spellcheck="false">Compare the facts currently available, then ask us to confirm the locality, documents, availability, and visit details before making a decision.</p>
+        <h1 id="catalogue-title" data-pretext>Homes worth a closer look.</h1>
+        <p data-pretext>Compare the facts currently available, then ask us to confirm the locality, documents, availability, and visit details before making a decision.</p>
       </div>
       <aside class="catalogue-hero__aside"><p class="notice"><strong>Details supplied by the listing contact.</strong> Price and property facts are shown as received. Availability, documents, and exact location still require confirmation.</p></aside>
     </section>
@@ -48,7 +58,7 @@
           <div class="form-field"><label for="catalogue-intent">I want to</label><select id="catalogue-intent" name="intent" data-property-filter><option value="">Rent or buy</option><option value="rent">Rent</option><option value="buy">Buy</option></select></div>
           <div class="form-field"><label for="catalogue-locality">Locality</label><select id="catalogue-locality" name="locality" data-property-filter><option value="">Any locality</option><option value="Bengaluru">Bengaluru · exact area to confirm</option></select></div>
           <div class="form-field"><label for="catalogue-type">Property type</label><select id="catalogue-type" name="type" data-property-filter><option value="">Any type</option><option value="apartment">Apartment</option><option value="house">Independent home</option></select></div>
-          <div class="form-field"><label for="catalogue-budget">Budget</label><select id="catalogue-budget" name="budget" data-property-filter><option value="">Any budget</option><option value="rent-basic">Monthly rent</option><option value="sale-basic">Sale budget</option></select></div>
+          <div class="form-field"><label for="catalogue-budget">Budget</label><select id="catalogue-budget" name="budget" data-property-filter><option value="">Any budget</option><option value="under-4-crore">Under ₹4 crore</option><option value="4-5-crore">₹4–5 crore</option><option value="over-5-crore">Over ₹5 crore</option></select></div>
           <button class="button button--primary" type="button" data-clear-filters>Clear filters</button>
         </form>
       </div>
@@ -59,12 +69,12 @@
         <div class="catalogue-toolbar"><h2 id="results-title">Homes for sale</h2><p><span data-result-count>2 properties</span> · enquire to confirm availability</p></div>
         <!-- This initial catalogue is intentionally static; connect a maintained listing source when inventory grows. -->
         <div class="catalogue-grid" data-property-grid>
-          <article class="property-card catalogue-card" data-property-card data-intent="buy" data-locality="Bengaluru" data-type="house" data-budget="sale-basic">
+          <article class="property-card catalogue-card" data-property-card data-intent="buy" data-locality="Bengaluru" data-type="house" data-budget="under-4-crore">
             <div class="property-card__image-wrap"><img class="property-card__image" src="../assets/property-30x40-bda.jpeg" alt="Front view of the 30 by 40 BDA independent home in Bengaluru" width="1600" height="1204" loading="eager"><span class="property-card__flag">New listing</span></div>
             <div class="property-card__body"><h3>30 × 40 BDA independent home</h3><p>Bengaluru · exact locality to confirm</p><div class="property-meta"><span>1,200 sq ft site</span><span>5 rooms</span><span>BDA property</span></div><div class="property-card__footer"><div><p class="property-price">₹3.05 crore</p><p class="property-status">Availability to confirm</p></div><a class="text-link" href="../property-30x40-bda.html">View property <span aria-hidden="true">→</span></a></div></div>
           </article>
-          <article class="property-card catalogue-card" data-property-card data-intent="buy" data-locality="Bengaluru" data-type="house" data-budget="sale-basic">
-            <div class="property-card__image-wrap"><img class="property-card__image" src="../assets/property-2200sqft-bda.jpeg" alt="Front view of the 2,200 square foot BDA independent home in Bengaluru" width="1600" height="1204" loading="eager"><span class="property-card__flag">New listing</span></div>
+          <article class="property-card catalogue-card" data-property-card data-intent="buy" data-locality="Bengaluru" data-type="house" data-budget="4-5-crore">
+            <div class="property-card__image-wrap"><img class="property-card__image" src="../assets/property-2200sqft-bda.jpeg" alt="Front view of the 2,200 square foot BDA independent home in Bengaluru" width="1600" height="1204" loading="lazy"><span class="property-card__flag">New listing</span></div>
             <div class="property-card__body"><h3>2,200 sq ft BDA independent home</h3><p>Bengaluru · exact locality to confirm</p><div class="property-meta"><span>2,200 sq ft</span><span>5 rooms</span><span>35-ft road</span></div><div class="property-card__footer"><div><p class="property-price">₹4.50 crore</p><p class="property-status">Availability to confirm</p></div><a class="text-link" href="../property-2200sqft-bda.html">View property <span aria-hidden="true">→</span></a></div></div>
           </article>
           <div class="empty-state" data-empty-state hidden><h3>No properties match those filters.</h3><p>Try another option or tell the team what you need. We can help you check for a suitable property.</p><a class="button button--outline" href="../contact.html">Tell us your need</a></div>

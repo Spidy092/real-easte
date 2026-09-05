@@ -36,12 +36,20 @@
   document.querySelectorAll('[data-lead-form]').forEach(function (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
+      var recipient = form.getAttribute('data-lead-email') || 'sale@bhaivatech.com';
+      var fields = Array.prototype.slice.call(form.querySelectorAll('input, select, textarea'));
+      var details = fields.filter(function (field) {
+        return field.name && field.value;
+      }).map(function (field) {
+        return field.name + ': ' + field.value;
+      });
+      details.push('Page: ' + window.location.href);
       var status = form.querySelector('[data-form-status]');
       if (status) {
         status.hidden = false;
-        status.textContent = 'This preview form is not connected yet. Please email sale@bhaivatech.com or WhatsApp +91 81975 19766.';
+        status.textContent = 'Opening your email app with the enquiry addressed to ' + recipient + '.';
       }
-      form.reset();
+      window.location.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent('BhaivaTech property enquiry') + '&body=' + encodeURIComponent(details.join('\n'));
     });
   });
 
