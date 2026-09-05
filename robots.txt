@@ -2,5 +2,5 @@ User-agent: *
 Allow: /
 Disallow: /property-preview.html
 
-# Replace this host if the final landing page is deployed elsewhere.
+# Keep the sitemap host aligned with the production canonical host.
 Sitemap: https://bhaivatech.com/sitemap.xml

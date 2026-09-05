@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Preview sitemap. Add live property and locality URLs only after client review. -->
+<!-- Keep this list aligned with the indexable URLs deployed on bhaivatech.com. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://bhaivatech.com/</loc></url>
+  <url><loc>https://bhaivatech.com/properties/</loc></url>
+  <url><loc>https://bhaivatech.com/property-30x40-bda.html</loc></url>
+  <url><loc>https://bhaivatech.com/property-2200sqft-bda.html</loc></url>
   <url><loc>https://bhaivatech.com/about.html</loc></url>
   <url><loc>https://bhaivatech.com/how-we-verify.html</loc></url>
   <url><loc>https://bhaivatech.com/renters-guide.html</loc></url>

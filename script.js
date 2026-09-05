@@ -36,12 +36,20 @@
   document.querySelectorAll('[data-lead-form]').forEach(function (form) {
     form.addEventListener('submit', function (event) {
       event.preventDefault();
+      var recipient = form.getAttribute('data-lead-email') || 'sale@bhaivatech.com';
+      var fields = Array.prototype.slice.call(form.querySelectorAll('input, select, textarea'));
+      var details = fields.filter(function (field) {
+        return field.name && field.value;
+      }).map(function (field) {
+        return field.name + ': ' + field.value;
+      });
+      details.push('Page: ' + window.location.href);
       var status = form.querySelector('[data-form-status]');
       if (status) {
         status.hidden = false;
-        status.textContent = 'Thanks. This preview is ready for the client’s real lead destination.';
+        status.textContent = 'Opening your email app with the enquiry addressed to ' + recipient + '.';
       }
-      form.reset();
+      window.location.href = 'mailto:' + recipient + '?subject=' + encodeURIComponent('BhaivaTech property enquiry') + '&body=' + encodeURIComponent(details.join('\n'));
     });
   });
 
@@ -68,14 +76,22 @@
     });
 
     if (resultCount) {
-      resultCount.textContent = visibleCount + (visibleCount === 1 ? ' preview listing' : ' preview listings');
+      resultCount.textContent = visibleCount + (visibleCount === 1 ? ' property' : ' properties');
     }
     if (emptyState) emptyState.hidden = visibleCount !== 0;
   }
 
   filters.forEach(function (filter) {
     filter.addEventListener('input', filterProperties);
-    filter.addEventListener('change', filterProperties);
+    filter.addEventListener('change', function () {
+      var nextParams = new URLSearchParams();
+      filters.forEach(function (item) {
+        if (item.value) nextParams.set(item.name, item.value);
+      });
+      var query = nextParams.toString();
+      window.history.replaceState({}, '', window.location.pathname + (query ? '?' + query : ''));
+      filterProperties();
+    });
   });
 
   var clearFilters = document.querySelector('[data-clear-filters]');
