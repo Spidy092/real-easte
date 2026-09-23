@@ -18,8 +18,9 @@ jobs:
           server: ftp.bhaivatech.com
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          server-dir: /public_html/
+          # FTP account is jailed to the document root already, so deploy to /
+          server-dir: /
           exclude: |
-            **/.git*
-            **/.github/**
+            .git/**
+            .github/**
             **/*.md
